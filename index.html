@@ -2,47 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>AutoBiz Lab | AI Employees for Your Business</title>
 
-  <meta
-    name="description"
-    content="AutoBiz Lab builds AI employees that help businesses manage customers, conversations, follow-ups, and everyday business tasks."
-  >
+  <meta name="description" content="AutoBiz Lab builds AI employees that help businesses manage customers, conversations, follow-ups and everyday business tasks.">
 
-  <meta
-    name="keywords"
-    content="AutoBiz Lab, AI employees, AI customer management, AI business automation, AI customer support, AI sales"
-  >
+  <meta name="keywords" content="AutoBiz Lab, AI employees, AI customer management, AI customer support, business automation">
 
   <meta name="author" content="AutoBiz Lab">
 
   <meta property="og:title" content="AutoBiz Lab | AI Employees for Your Business">
-  <meta
-    property="og:description"
-    content="AI employees that help businesses manage customers and automate everyday business work."
-  >
+  <meta property="og:description" content="AI employees that help businesses manage customers and automate everyday business work.">
   <meta property="og:type" content="website">
 
-  <meta name="theme-color" content="#0b1020">
+  <meta name="theme-color" content="#07111f">
 
   <style>
     :root {
-      --bg: #ffffff;
-      --bg-soft: #f7f9fc;
-      --dark: #0b1020;
-      --text: #172033;
-      --muted: #647084;
+      --dark: #07111f;
+      --dark-2: #0d1a2d;
+      --blue: #3563ff;
+      --blue-dark: #244bd0;
+      --text: #111827;
+      --muted: #667085;
+      --light: #f7f9fc;
+      --white: #ffffff;
       --border: #e6eaf0;
-      --primary: #3157ff;
-      --primary-dark: #2342d0;
-      --card: #ffffff;
       --success: #16a34a;
-      --shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+      --shadow: 0 20px 60px rgba(15, 23, 42, 0.09);
       --radius: 20px;
-      --max-width: 1180px;
+      --max: 1180px;
     }
 
     * {
@@ -56,46 +46,37 @@
     }
 
     body {
-      font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-      background: var(--bg);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Arial, sans-serif;
       color: var(--text);
+      background: var(--white);
       line-height: 1.6;
       overflow-x: hidden;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
+    button {
+      font: inherit;
     }
 
     .container {
-      width: min(92%, var(--max-width));
-      margin: 0 auto;
+      width: min(92%, var(--max));
+      margin: auto;
     }
 
-    /* =========================
-       HEADER
-    ========================== */
+    /* ================= HEADER ================= */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(230, 234, 240, 0.8);
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
     }
 
     .navbar {
@@ -103,85 +84,90 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 11px;
-      font-weight: 800;
       font-size: 21px;
-      letter-spacing: -0.5px;
+      font-weight: 850;
+      letter-spacing: -.5px;
     }
 
-    .brand-logo {
-      width: 38px;
-      height: 38px;
+    .brand-icon {
+      width: 39px;
+      height: 39px;
       border-radius: 11px;
       background: var(--dark);
       color: white;
       display: grid;
       place-items: center;
-      font-size: 17px;
       font-weight: 900;
     }
 
-    .nav-links {
+    .nav {
       display: flex;
-      align-items: center;
-      gap: 28px;
+      gap: 27px;
       list-style: none;
+      color: #505b6d;
       font-size: 14px;
-      font-weight: 600;
-      color: #4c5668;
+      font-weight: 650;
     }
 
-    .nav-links a:hover {
-      color: var(--primary);
+    .nav a:hover {
+      color: var(--blue);
     }
 
-    .nav-actions {
+    .nav-buttons {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .menu-btn {
+    .menu-button {
       display: none;
-      border: 0;
-      background: transparent;
-      font-size: 26px;
+      background: none;
+      border: none;
+      font-size: 27px;
       cursor: pointer;
     }
 
-    /* =========================
-       BUTTONS
-    ========================== */
+    /* ================= BUTTONS ================= */
 
     .btn {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
-      gap: 8px;
+      align-items: center;
       min-height: 46px;
       padding: 0 20px;
-      border-radius: 11px;
+      border-radius: 10px;
       font-size: 14px;
       font-weight: 750;
-      border: 1px solid transparent;
+      transition: .2s ease;
       cursor: pointer;
-      transition: 0.25s ease;
+      border: 1px solid transparent;
     }
 
     .btn-primary {
-      background: var(--primary);
+      background: var(--blue);
       color: white;
-      box-shadow: 0 10px 25px rgba(49, 87, 255, 0.22);
+      box-shadow: 0 10px 25px rgba(53,99,255,.22);
     }
 
     .btn-primary:hover {
-      background: var(--primary-dark);
+      background: var(--blue-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: white;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: #cbd2dc;
       transform: translateY(-2px);
     }
 
@@ -192,37 +178,16 @@
 
     .btn-dark:hover {
       transform: translateY(-2px);
-      box-shadow: var(--shadow);
     }
 
-    .btn-outline {
-      border-color: var(--border);
-      background: white;
-      color: var(--text);
-    }
-
-    .btn-outline:hover {
-      border-color: #c8cfda;
-      transform: translateY(-2px);
-    }
-
-    /* =========================
-       HERO
-    ========================== */
+    /* ================= HERO ================= */
 
     .hero {
-      position: relative;
-      padding: 105px 0 90px;
+      padding: 105px 0 85px;
       background:
-        radial-gradient(circle at 15% 10%, rgba(49, 87, 255, 0.10), transparent 30%),
-        radial-gradient(circle at 85% 20%, rgba(100, 80, 255, 0.08), transparent 28%),
-        var(--bg);
-      overflow: hidden;
-    }
-
-    .hero-content {
-      max-width: 850px;
-      margin: 0 auto;
+        radial-gradient(circle at 15% 15%, rgba(53,99,255,.12), transparent 28%),
+        radial-gradient(circle at 85% 20%, rgba(109,78,255,.10), transparent 30%),
+        white;
       text-align: center;
     }
 
@@ -230,72 +195,69 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 13px;
+      padding: 8px 14px;
       border: 1px solid var(--border);
       border-radius: 999px;
       background: white;
-      color: #4c5668;
+      color: #586276;
       font-size: 13px;
       font-weight: 700;
-      margin-bottom: 24px;
-      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.04);
+      margin-bottom: 25px;
     }
 
     .badge-dot {
       width: 8px;
       height: 8px;
-      border-radius: 50%;
       background: var(--success);
+      border-radius: 50%;
     }
 
     .hero h1 {
-      font-size: clamp(45px, 7vw, 78px);
+      max-width: 900px;
+      margin: auto;
+      color: var(--dark);
+      font-size: clamp(46px, 7vw, 78px);
       line-height: 1.02;
       letter-spacing: -3px;
-      color: var(--dark);
-      margin-bottom: 24px;
     }
 
-    .gradient-text {
-      background: linear-gradient(90deg, #3157ff, #6c4cff);
+    .gradient {
+      background: linear-gradient(90deg,#3563ff,#704cff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-clip: text;
     }
 
-    .hero-description {
-      max-width: 690px;
-      margin: 0 auto;
+    .hero p {
+      max-width: 700px;
+      margin: 25px auto 0;
       color: var(--muted);
-      font-size: 19px;
+      font-size: 18px;
       line-height: 1.75;
     }
 
     .hero-actions {
+      margin-top: 32px;
       display: flex;
       justify-content: center;
       gap: 12px;
-      margin-top: 34px;
       flex-wrap: wrap;
     }
 
-    .hero-note {
-      margin-top: 18px;
-      color: #7a8494;
-      font-size: 13px;
+    .hero-small {
+      margin-top: 15px !important;
+      font-size: 13px !important;
+      color: #8a93a3 !important;
     }
 
-    /* =========================
-       PRODUCT PREVIEW
-    ========================== */
+    /* ================= PRODUCT PREVIEW ================= */
 
-    .product-preview {
+    .preview {
+      max-width: 1050px;
       margin: 65px auto 0;
-      max-width: 1030px;
       background: var(--dark);
-      border-radius: 24px;
       padding: 10px;
-      box-shadow: 0 30px 90px rgba(11, 16, 32, 0.22);
+      border-radius: 25px;
+      box-shadow: 0 30px 90px rgba(7,17,31,.23);
     }
 
     .preview-window {
@@ -305,76 +267,72 @@
       text-align: left;
     }
 
-    .window-top {
+    .window-bar {
       height: 48px;
+      background: white;
+      border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
       gap: 7px;
-      padding: 0 17px;
-      background: white;
-      border-bottom: 1px solid var(--border);
+      padding-left: 18px;
     }
 
     .window-dot {
       width: 9px;
       height: 9px;
+      background: #cbd2dc;
       border-radius: 50%;
-      background: #cbd1dc;
     }
 
     .dashboard {
       display: grid;
-      grid-template-columns: 220px 1fr;
+      grid-template-columns: 210px 1fr;
       min-height: 400px;
     }
 
     .sidebar {
       background: white;
       border-right: 1px solid var(--border);
-      padding: 25px 16px;
+      padding: 25px 15px;
     }
 
-    .side-title {
-      font-weight: 800;
+    .sidebar-title {
+      font-weight: 850;
       margin-bottom: 25px;
     }
 
-    .side-item {
-      padding: 11px 12px;
+    .sidebar-item {
+      padding: 10px 12px;
+      margin-bottom: 5px;
       border-radius: 9px;
-      color: #687386;
       font-size: 13px;
-      margin-bottom: 6px;
+      color: #697386;
     }
 
-    .side-item.active {
+    .sidebar-item.active {
       background: #eef2ff;
-      color: var(--primary);
-      font-weight: 700;
+      color: var(--blue);
+      font-weight: 750;
     }
 
     .dashboard-main {
-      padding: 30px;
+      padding: 28px;
     }
 
-    .dashboard-header {
+    .dashboard-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 15px;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
     }
 
     .dashboard-title {
-      font-size: 22px;
-      font-weight: 800;
+      font-size: 21px;
+      font-weight: 850;
     }
 
-    .status {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 7px 11px;
+    .online {
+      padding: 6px 10px;
       border-radius: 999px;
       background: #ecfdf3;
       color: #16803d;
@@ -388,258 +346,240 @@
       gap: 18px;
     }
 
-    .dash-card {
+    .dashboard-card {
       background: white;
       border: 1px solid var(--border);
       border-radius: 15px;
       padding: 20px;
     }
 
-    .dash-card h4 {
-      margin-bottom: 15px;
+    .dashboard-card h4 {
       font-size: 14px;
-    }
-
-    .chat {
-      display: flex;
-      flex-direction: column;
-      gap: 11px;
+      margin-bottom: 16px;
     }
 
     .message {
       padding: 11px 13px;
       border-radius: 12px;
-      max-width: 85%;
+      margin: 9px 0;
       font-size: 12px;
+      max-width: 85%;
     }
 
-    .message.customer {
+    .customer-message {
       background: #f1f4f8;
-      align-self: flex-start;
     }
 
-    .message.ai {
+    .ai-message {
+      margin-left: auto;
       background: #eef2ff;
       color: #263ea4;
-      align-self: flex-end;
     }
 
-    .metric {
-      font-size: 30px;
+    .big-text {
+      font-size: 28px;
       font-weight: 850;
-      color: var(--dark);
     }
 
-    .metric-label {
+    .small-text {
       color: var(--muted);
       font-size: 12px;
     }
 
-    /* =========================
-       SECTIONS
-    ========================== */
+    /* ================= SECTIONS ================= */
 
     section {
-      padding: 100px 0;
+      padding: 95px 0;
     }
 
-    .section-heading {
+    .light-section {
+      background: var(--light);
+    }
+
+    .section-title {
       max-width: 720px;
-      margin-bottom: 50px;
+      margin-bottom: 45px;
     }
 
-    .section-heading.center {
+    .center {
       text-align: center;
       margin-left: auto;
       margin-right: auto;
     }
 
     .eyebrow {
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 800;
+      color: var(--blue);
       text-transform: uppercase;
       letter-spacing: 1.2px;
-      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 850;
+      margin-bottom: 11px;
     }
 
-    .section-heading h2 {
-      font-size: clamp(34px, 5vw, 52px);
-      line-height: 1.08;
-      letter-spacing: -1.8px;
+    .section-title h2 {
       color: var(--dark);
-      margin-bottom: 17px;
+      font-size: clamp(34px,5vw,53px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
     }
 
-    .section-heading p {
+    .section-title p {
       color: var(--muted);
-      font-size: 17px;
+      font-size: 16px;
     }
 
-    /* =========================
-       PROBLEM
-    ========================== */
+    /* ================= PROBLEM ================= */
 
-    .problem {
-      background: var(--bg-soft);
-    }
-
-    .problem-grid {
+    .cards-3 {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 20px;
     }
 
-    .problem-card {
-      padding: 30px;
+    .card {
       background: white;
       border: 1px solid var(--border);
       border-radius: var(--radius);
+      padding: 30px;
     }
 
-    .problem-icon {
-      width: 46px;
-      height: 46px;
+    .card-number {
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      background: #eef2ff;
+      color: var(--blue);
       display: grid;
       place-items: center;
-      border-radius: 13px;
-      background: #eef2ff;
-      color: var(--primary);
-      font-weight: 900;
+      font-weight: 850;
       margin-bottom: 20px;
     }
 
-    .problem-card h3 {
-      font-size: 19px;
+    .card h3 {
       margin-bottom: 9px;
+      font-size: 19px;
     }
 
-    .problem-card p {
+    .card p {
       color: var(--muted);
       font-size: 14px;
     }
 
-    /* =========================
-       AI EMPLOYEE
-    ========================== */
+    /* ================= AI EMPLOYEE ================= */
 
-    .employee-layout {
+    .two-column {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 60px;
       align-items: center;
     }
 
-    .employee-list {
+    .check-list {
       display: grid;
-      gap: 14px;
+      gap: 13px;
     }
 
-    .employee-item {
+    .check-item {
       display: flex;
-      gap: 15px;
+      gap: 14px;
       padding: 17px;
       border: 1px solid var(--border);
       border-radius: 14px;
-      background: white;
     }
 
-    .check {
-      width: 28px;
-      height: 28px;
+    .check-icon {
+      width: 27px;
+      height: 27px;
       border-radius: 50%;
       background: #eef2ff;
-      color: var(--primary);
+      color: var(--blue);
       display: grid;
       place-items: center;
-      font-size: 13px;
       font-weight: 900;
       flex-shrink: 0;
     }
 
-    .employee-item h4 {
+    .check-item h4 {
+      font-size: 15px;
       margin-bottom: 3px;
     }
 
-    .employee-item p {
+    .check-item p {
       color: var(--muted);
       font-size: 13px;
     }
 
-    .employee-card {
+    .ai-box {
       background: var(--dark);
+      color: white;
       border-radius: 25px;
       padding: 30px;
-      color: white;
       box-shadow: var(--shadow);
     }
 
-    .employee-card-top {
+    .ai-box-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 28px;
+      margin-bottom: 25px;
     }
 
-    .employee-name {
-      font-size: 20px;
-      font-weight: 800;
+    .ai-box-title {
+      font-size: 19px;
+      font-weight: 850;
     }
 
-    .online {
+    .ai-online {
       color: #7df0a8;
       font-size: 12px;
     }
 
-    .employee-chat {
-      background: #151b2e;
+    .chat-box {
+      background: #131c2e;
       border-radius: 16px;
       padding: 18px;
     }
 
-    .employee-message {
-      padding: 13px;
-      border-radius: 12px;
-      margin-bottom: 12px;
+    .chat-message {
+      padding: 12px;
+      border-radius: 11px;
+      margin-bottom: 11px;
       font-size: 13px;
     }
 
-    .employee-message.user {
-      background: #242c43;
+    .chat-user {
+      background: #232e45;
     }
 
-    .employee-message.ai {
-      background: #3157ff;
-      margin-left: 25px;
+    .chat-ai {
+      background: var(--blue);
+      margin-left: 20px;
     }
 
-    /* =========================
-       HOW IT WORKS
-    ========================== */
+    /* ================= STEPS ================= */
 
     .steps {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
     }
 
     .step {
-      position: relative;
-      padding: 32px;
       border: 1px solid var(--border);
       border-radius: var(--radius);
+      padding: 30px;
     }
 
     .step-number {
-      font-size: 14px;
-      font-weight: 900;
-      color: var(--primary);
-      margin-bottom: 22px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 850;
+      margin-bottom: 20px;
     }
 
     .step h3 {
-      font-size: 21px;
-      margin-bottom: 10px;
+      font-size: 20px;
+      margin-bottom: 9px;
     }
 
     .step p {
@@ -647,50 +587,41 @@
       font-size: 14px;
     }
 
-    /* =========================
-       FEATURES
-    ========================== */
+    /* ================= FEATURES ================= */
 
-    .features {
-      background: var(--bg-soft);
-    }
-
-    .feature-grid {
+    .features-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 18px;
     }
 
-    .feature-card {
-      background: white;
+    .feature {
+      padding: 26px;
       border: 1px solid var(--border);
       border-radius: 17px;
-      padding: 27px;
-      transition: 0.25s ease;
+      transition: .2s ease;
     }
 
-    .feature-card:hover {
+    .feature:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow);
     }
 
-    .feature-card h3 {
-      margin-bottom: 8px;
+    .feature h3 {
       font-size: 18px;
+      margin-bottom: 7px;
     }
 
-    .feature-card p {
+    .feature p {
       color: var(--muted);
       font-size: 14px;
     }
 
-    /* =========================
-       PRICING
-    ========================== */
+    /* ================= PRICING ================= */
 
-    .pricing-grid {
+    .pricing {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
       gap: 20px;
     }
 
@@ -702,56 +633,44 @@
     }
 
     .price-card.featured {
-      border: 2px solid var(--primary);
+      border: 2px solid var(--blue);
       box-shadow: var(--shadow);
     }
 
     .price-card h3 {
       font-size: 21px;
-      margin-bottom: 8px;
     }
 
-    .price-card p {
+    .price-card > p {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
+      margin-top: 5px;
     }
 
     .price {
-      font-size: 38px;
+      margin: 22px 0;
+      font-size: 34px;
       font-weight: 850;
       color: var(--dark);
-      margin: 22px 0;
     }
 
-    .price small {
-      font-size: 13px;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .price-features {
+    .price-list {
       list-style: none;
-      margin: 25px 0;
+      margin-bottom: 25px;
     }
 
-    .price-features li {
-      padding: 8px 0;
-      color: #536074;
+    .price-list li {
+      color: #586477;
       font-size: 14px;
+      padding: 7px 0;
     }
 
-    /* =========================
-       ABOUT
-    ========================== */
-
-    .about {
-      background: var(--bg-soft);
-    }
+    /* ================= ABOUT ================= */
 
     .about-box {
       max-width: 850px;
-      margin: auto;
       text-align: center;
+      margin: auto;
     }
 
     .about-box p {
@@ -759,9 +678,74 @@
       font-size: 17px;
     }
 
-    /* =========================
-       FAQ
-    ========================== */
+    /* ================= FOUNDER ================= */
+
+    .founder {
+      background: var(--light);
+    }
+
+    .founder-box {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 35px;
+      align-items: center;
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 35px;
+    }
+
+    .founder-avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: linear-gradient(135deg,#0d1a2d,#3563ff);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 50px;
+      font-weight: 900;
+    }
+
+    .founder-info h2 {
+      font-size: 30px;
+      color: var(--dark);
+    }
+
+    .founder-role {
+      color: var(--blue);
+      font-weight: 750;
+      margin: 4px 0 13px;
+    }
+
+    .founder-info p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .founder-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .founder-link {
+      padding: 9px 13px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .founder-link:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    /* ================= FAQ ================= */
 
     .faq {
       max-width: 850px;
@@ -769,8 +753,8 @@
     }
 
     details {
+      padding: 21px 0;
       border-bottom: 1px solid var(--border);
-      padding: 22px 0;
     }
 
     summary {
@@ -780,74 +764,69 @@
     }
 
     details p {
-      margin-top: 12px;
+      margin-top: 11px;
       color: var(--muted);
       font-size: 14px;
     }
 
-    /* =========================
-       CTA
-    ========================== */
+    /* ================= CTA ================= */
 
-    .final-cta {
-      padding: 100px 0;
+    .cta-section {
+      padding-top: 30px;
+      padding-bottom: 100px;
     }
 
-    .cta-box {
+    .cta {
       background: var(--dark);
       color: white;
-      border-radius: 28px;
-      padding: 75px 30px;
       text-align: center;
-      position: relative;
-      overflow: hidden;
+      padding: 75px 25px;
+      border-radius: 28px;
     }
 
-    .cta-box h2 {
-      font-size: clamp(34px, 5vw, 55px);
-      line-height: 1.05;
-      letter-spacing: -1.5px;
-      margin-bottom: 17px;
-    }
-
-    .cta-box p {
-      max-width: 620px;
+    .cta h2 {
+      max-width: 750px;
       margin: auto;
-      color: #aeb7c8;
-      font-size: 16px;
+      font-size: clamp(35px,5vw,55px);
+      line-height: 1.05;
+      letter-spacing: -2px;
     }
 
-    .cta-box .btn {
-      margin-top: 28px;
+    .cta p {
+      max-width: 620px;
+      margin: 18px auto 0;
+      color: #aeb8c9;
     }
 
-    /* =========================
-       FOOTER
-    ========================== */
+    .cta .btn {
+      margin-top: 27px;
+    }
+
+    /* ================= FOOTER ================= */
 
     footer {
-      background: #070b16;
+      background: #050a13;
       color: white;
       padding: 55px 0 25px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr repeat(3, 1fr);
-      gap: 40px;
-      padding-bottom: 45px;
+      grid-template-columns: 1.5fr repeat(3,1fr);
+      gap: 35px;
+      padding-bottom: 40px;
     }
 
-    .footer-brand p {
-      max-width: 330px;
-      color: #8993a7;
+    .footer-description {
+      max-width: 320px;
+      color: #8792a5;
       font-size: 14px;
-      margin-top: 15px;
+      margin-top: 14px;
     }
 
     .footer-title {
       font-weight: 800;
-      margin-bottom: 15px;
+      margin-bottom: 13px;
     }
 
     .footer-links {
@@ -855,11 +834,11 @@
     }
 
     .footer-links li {
-      margin: 9px 0;
+      margin: 8px 0;
     }
 
     .footer-links a {
-      color: #8993a7;
+      color: #8792a5;
       font-size: 14px;
     }
 
@@ -868,28 +847,26 @@
     }
 
     .footer-bottom {
-      border-top: 1px solid #1c2435;
-      padding-top: 22px;
-      color: #697489;
-      font-size: 13px;
+      border-top: 1px solid #1b2434;
+      padding-top: 20px;
+      color: #687489;
+      font-size: 12px;
       display: flex;
       justify-content: space-between;
       gap: 15px;
       flex-wrap: wrap;
     }
 
-    /* =========================
-       MOBILE
-    ========================== */
+    /* ================= MOBILE ================= */
 
     @media (max-width: 900px) {
 
-      .nav-links,
-      .nav-actions {
+      .nav,
+      .nav-buttons {
         display: none;
       }
 
-      .menu-btn {
+      .menu-button {
         display: block;
       }
 
@@ -901,19 +878,32 @@
         display: none;
       }
 
-      .employee-layout {
+      .two-column {
         grid-template-columns: 1fr;
       }
 
-      .problem-grid,
+      .cards-3,
       .steps,
-      .feature-grid,
-      .pricing-grid {
+      .features-grid,
+      .pricing {
         grid-template-columns: 1fr;
       }
 
       .footer-grid {
         grid-template-columns: 1fr 1fr;
+      }
+
+      .founder-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .founder-avatar {
+        margin: auto;
+      }
+
+      .founder-links {
+        justify-content: center;
       }
     }
 
@@ -927,7 +917,7 @@
         letter-spacing: -2px;
       }
 
-      .hero-description {
+      .hero p {
         font-size: 16px;
       }
 
@@ -936,7 +926,7 @@
       }
 
       .dashboard-main {
-        padding: 20px;
+        padding: 18px;
       }
 
       .dashboard-grid {
@@ -947,8 +937,12 @@
         grid-template-columns: 1fr;
       }
 
-      .cta-box {
-        padding: 55px 22px;
+      .cta {
+        padding: 55px 20px;
+      }
+
+      .founder-box {
+        padding: 25px;
       }
     }
   </style>
@@ -956,95 +950,92 @@
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
+  <!-- HEADER -->
 
   <header>
-
     <div class="container navbar">
 
-      <a href="#" class="brand">
-        <span class="brand-logo">A</span>
+      <a href="#home" class="brand">
+        <span class="brand-icon">A</span>
         <span>AutoBiz Lab</span>
       </a>
 
-      <ul class="nav-links">
+      <ul class="nav" id="desktopNav">
         <li><a href="#product">Product</a></li>
         <li><a href="#how">How It Works</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#founder">Founder</a></li>
       </ul>
 
-      <div class="nav-actions">
-        <a href="#pricing" class="btn btn-outline">Pricing</a>
-        <a href="#start" class="btn btn-primary">Get Started</a>
+      <div class="nav-buttons">
+        <a href="https://autobiz-saas-platfor-a94v.bolt.host" class="btn btn-outline">
+          Login
+        </a>
+
+        <a href="https://autobiz-saas-platfor-a94v.bolt.host" class="btn btn-primary">
+          Start Free
+        </a>
       </div>
 
-      <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+      <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation">
         ☰
       </button>
 
     </div>
-
   </header>
 
 
-  <main>
+  <main id="home">
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- HERO -->
 
     <section class="hero">
 
       <div class="container">
 
-        <div class="hero-content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Building the future of AI-powered business
+        </div>
 
-          <div class="badge">
-            <span class="badge-dot"></span>
-            Building the future of AI-powered business
-          </div>
+        <h1>
+          AI Employees
+          <span class="gradient">for Your Business</span>
+        </h1>
 
-          <h1>
-            AI Employees
-            <span class="gradient-text">for Your Business</span>
-          </h1>
+        <p>
+          AutoBiz Lab builds AI employees that help businesses
+          manage customers, conversations, follow-ups and everyday
+          business tasks.
+        </p>
 
-          <p class="hero-description">
-            AutoBiz Lab builds AI employees that help businesses
-            manage customers, conversations, follow-ups and everyday
-            business tasks.
-          </p>
+        <div class="hero-actions">
 
-          <div class="hero-actions">
+          <a href="https://autobiz-saas-platfor-a94v.bolt.host"
+             class="btn btn-primary">
+            Start Free →
+          </a>
 
-            <a href="#start" class="btn btn-primary">
-              Start Free →
-            </a>
-
-            <a href="#product" class="btn btn-outline">
-              See How It Works
-            </a>
-
-          </div>
-
-          <p class="hero-note">
-            Start with an AI Customer Manager built for your business.
-          </p>
+          <a href="#product" class="btn btn-outline">
+            See How It Works
+          </a>
 
         </div>
+
+        <p class="hero-small">
+          Start with an AI Customer Manager built for your business.
+        </p>
 
 
         <!-- PRODUCT PREVIEW -->
 
-        <div class="product-preview">
+        <div class="preview">
 
           <div class="preview-window">
 
-            <div class="window-top">
+            <div class="window-bar">
               <span class="window-dot"></span>
               <span class="window-dot"></span>
               <span class="window-dot"></span>
@@ -1052,4 +1043,8 @@
 
             <div class="dashboard">
 
-        
+              <aside class="sidebar">
+
+                <div class="sidebar-title">
+                  AutoBiz
+    
