@@ -6,39 +6,16 @@
 
   <title>AutoBiz Lab | AI Employees for Your Business</title>
 
-  <meta name="description" content="AutoBiz Lab builds AI employees that help businesses manage customers, conversations, follow-ups and everyday business tasks.">
-
-  <meta name="keywords" content="AutoBiz Lab, AI employees, AI customer management, AI customer support, business automation">
+  <meta name="description"
+        content="AutoBiz Lab builds AI employees that help businesses manage customers and automate everyday business work.">
 
   <meta name="author" content="AutoBiz Lab">
 
-  <meta property="og:title" content="AutoBiz Lab | AI Employees for Your Business">
-  <meta property="og:description" content="AI employees that help businesses manage customers and automate everyday business work.">
-  <meta property="og:type" content="website">
-
-  <meta name="theme-color" content="#07111f">
-
   <style>
-    :root {
-      --dark: #07111f;
-      --dark-2: #0d1a2d;
-      --blue: #3563ff;
-      --blue-dark: #244bd0;
-      --text: #111827;
-      --muted: #667085;
-      --light: #f7f9fc;
-      --white: #ffffff;
-      --border: #e6eaf0;
-      --success: #16a34a;
-      --shadow: 0 20px 60px rgba(15, 23, 42, 0.09);
-      --radius: 20px;
-      --max: 1180px;
-    }
-
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -46,12 +23,10 @@
     }
 
     body {
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Arial, sans-serif;
-      color: var(--text);
-      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111827;
+      background: #ffffff;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     a {
@@ -59,504 +34,397 @@
       color: inherit;
     }
 
-    button {
-      font: inherit;
-    }
-
     .container {
-      width: min(92%, var(--max));
+      width: 92%;
+      max-width: 1150px;
       margin: auto;
     }
 
-    /* ================= HEADER ================= */
+    /* HEADER */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255,255,255,.94);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e5e7eb;
     }
 
     .navbar {
-      min-height: 76px;
+      min-height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .brand {
+    .logo {
       display: flex;
       align-items: center;
-      gap: 11px;
-      font-size: 21px;
-      font-weight: 850;
-      letter-spacing: -.5px;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 800;
     }
 
-    .brand-icon {
-      width: 39px;
-      height: 39px;
-      border-radius: 11px;
-      background: var(--dark);
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: #111827;
       color: white;
       display: grid;
       place-items: center;
       font-weight: 900;
     }
 
-    .nav {
+    nav {
       display: flex;
-      gap: 27px;
-      list-style: none;
-      color: #505b6d;
-      font-size: 14px;
-      font-weight: 650;
-    }
-
-    .nav a:hover {
-      color: var(--blue);
-    }
-
-    .nav-buttons {
-      display: flex;
+      gap: 25px;
       align-items: center;
-      gap: 10px;
     }
 
-    .menu-button {
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4b5563;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .menu {
       display: none;
+      border: 0;
       background: none;
-      border: none;
-      font-size: 27px;
+      font-size: 28px;
       cursor: pointer;
     }
 
-    /* ================= BUTTONS ================= */
+    /* BUTTONS */
 
     .btn {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      min-height: 46px;
-      padding: 0 20px;
-      border-radius: 10px;
+      justify-content: center;
+      padding: 12px 19px;
+      border-radius: 9px;
       font-size: 14px;
-      font-weight: 750;
-      transition: .2s ease;
-      cursor: pointer;
-      border: 1px solid transparent;
+      font-weight: 700;
+      transition: 0.2s;
     }
 
     .btn-primary {
-      background: var(--blue);
+      background: #2563eb;
       color: white;
-      box-shadow: 0 10px 25px rgba(53,99,255,.22);
     }
 
     .btn-primary:hover {
-      background: var(--blue-dark);
+      background: #1d4ed8;
       transform: translateY(-2px);
     }
 
     .btn-outline {
+      border: 1px solid #d1d5db;
       background: white;
-      color: var(--text);
-      border-color: var(--border);
+      color: #111827;
     }
 
     .btn-outline:hover {
-      border-color: #cbd2dc;
-      transform: translateY(-2px);
+      border-color: #2563eb;
+      color: #2563eb;
     }
 
-    .btn-dark {
-      background: var(--dark);
-      color: white;
-    }
-
-    .btn-dark:hover {
-      transform: translateY(-2px);
-    }
-
-    /* ================= HERO ================= */
+    /* HERO */
 
     .hero {
-      padding: 105px 0 85px;
-      background:
-        radial-gradient(circle at 15% 15%, rgba(53,99,255,.12), transparent 28%),
-        radial-gradient(circle at 85% 20%, rgba(109,78,255,.10), transparent 30%),
-        white;
+      padding: 100px 0 80px;
       text-align: center;
+      background:
+        radial-gradient(circle at 15% 20%, #e8efff, transparent 30%),
+        radial-gradient(circle at 85% 20%, #eee9ff, transparent 30%),
+        white;
     }
 
     .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: white;
-      color: #586276;
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid #dbe3f0;
+      border-radius: 50px;
+      color: #4b5563;
       font-size: 13px;
       font-weight: 700;
-      margin-bottom: 25px;
-    }
-
-    .badge-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--success);
-      border-radius: 50%;
+      margin-bottom: 22px;
+      background: white;
     }
 
     .hero h1 {
-      max-width: 900px;
+      max-width: 850px;
       margin: auto;
-      color: var(--dark);
-      font-size: clamp(46px, 7vw, 78px);
-      line-height: 1.02;
+      font-size: clamp(45px, 7vw, 76px);
+      line-height: 1.03;
       letter-spacing: -3px;
+      color: #0f172a;
     }
 
-    .gradient {
-      background: linear-gradient(90deg,#3563ff,#704cff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .blue {
+      color: #2563eb;
     }
 
     .hero p {
-      max-width: 700px;
-      margin: 25px auto 0;
-      color: var(--muted);
+      max-width: 680px;
+      margin: 25px auto;
+      color: #667085;
       font-size: 18px;
-      line-height: 1.75;
     }
 
-    .hero-actions {
-      margin-top: 32px;
+    .hero-buttons {
       display: flex;
       justify-content: center;
       gap: 12px;
       flex-wrap: wrap;
     }
 
-    .hero-small {
-      margin-top: 15px !important;
-      font-size: 13px !important;
-      color: #8a93a3 !important;
-    }
+    /* PRODUCT PREVIEW */
 
-    /* ================= PRODUCT PREVIEW ================= */
+    .product-preview {
+      max-width: 950px;
+      margin: 60px auto 0;
+      background: #0f172a;
+      padding: 9px;
+      border-radius: 22px;
+      box-shadow: 0 30px 70px rgba(15,23,42,0.2);
+    }
 
     .preview {
-      max-width: 1050px;
-      margin: 65px auto 0;
-      background: var(--dark);
-      padding: 10px;
-      border-radius: 25px;
-      box-shadow: 0 30px 90px rgba(7,17,31,.23);
-    }
-
-    .preview-window {
       background: #f8fafc;
-      border-radius: 17px;
+      border-radius: 15px;
       overflow: hidden;
       text-align: left;
     }
 
-    .window-bar {
-      height: 48px;
+    .browser {
+      height: 45px;
       background: white;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid #e5e7eb;
       display: flex;
       align-items: center;
       gap: 7px;
-      padding-left: 18px;
+      padding-left: 16px;
     }
 
-    .window-dot {
+    .dot {
       width: 9px;
       height: 9px;
-      background: #cbd2dc;
       border-radius: 50%;
+      background: #cbd5e1;
     }
 
     .dashboard {
       display: grid;
-      grid-template-columns: 210px 1fr;
-      min-height: 400px;
+      grid-template-columns: 190px 1fr;
+      min-height: 350px;
     }
 
-    .sidebar {
+    .side {
       background: white;
-      border-right: 1px solid var(--border);
-      padding: 25px 15px;
+      border-right: 1px solid #e5e7eb;
+      padding: 22px 13px;
     }
 
-    .sidebar-title {
-      font-weight: 850;
-      margin-bottom: 25px;
+    .side strong {
+      display: block;
+      margin-bottom: 20px;
     }
 
-    .sidebar-item {
-      padding: 10px 12px;
-      margin-bottom: 5px;
-      border-radius: 9px;
+    .side-item {
+      padding: 9px 11px;
+      margin: 5px 0;
+      color: #64748b;
       font-size: 13px;
-      color: #697386;
+      border-radius: 8px;
     }
 
-    .sidebar-item.active {
+    .side-item.active {
       background: #eef2ff;
-      color: var(--blue);
-      font-weight: 750;
-    }
-
-    .dashboard-main {
-      padding: 28px;
-    }
-
-    .dashboard-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 22px;
-    }
-
-    .dashboard-title {
-      font-size: 21px;
-      font-weight: 850;
-    }
-
-    .online {
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: #ecfdf3;
-      color: #16803d;
-      font-size: 12px;
+      color: #2563eb;
       font-weight: 700;
     }
 
-    .dashboard-grid {
+    .dash-main {
+      padding: 25px;
+    }
+
+    .dash-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .status {
+      background: #dcfce7;
+      color: #15803d;
+      border-radius: 30px;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .dash-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      gap: 15px;
     }
 
-    .dashboard-card {
+    .dash-card {
       background: white;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 20px;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 18px;
     }
 
-    .dashboard-card h4 {
-      font-size: 14px;
-      margin-bottom: 16px;
+    .dash-card h4 {
+      margin-bottom: 15px;
     }
 
     .message {
-      padding: 11px 13px;
-      border-radius: 12px;
-      margin: 9px 0;
-      font-size: 12px;
-      max-width: 85%;
-    }
-
-    .customer-message {
-      background: #f1f4f8;
-    }
-
-    .ai-message {
-      margin-left: auto;
-      background: #eef2ff;
-      color: #263ea4;
-    }
-
-    .big-text {
-      font-size: 28px;
-      font-weight: 850;
-    }
-
-    .small-text {
-      color: var(--muted);
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 10px;
       font-size: 12px;
     }
 
-    /* ================= SECTIONS ================= */
+    .customer {
+      background: #f1f5f9;
+    }
+
+    .ai {
+      background: #e0e7ff;
+      color: #3730a3;
+      margin-left: 20px;
+    }
+
+    /* SECTIONS */
 
     section {
-      padding: 95px 0;
+      padding: 90px 0;
     }
 
-    .light-section {
-      background: var(--light);
+    .gray {
+      background: #f8fafc;
     }
 
-    .section-title {
-      max-width: 720px;
-      margin-bottom: 45px;
-    }
-
-    .center {
+    .section-head {
+      max-width: 700px;
+      margin: 0 auto 45px;
       text-align: center;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .eyebrow {
-      color: var(--blue);
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
+      color: #2563eb;
       font-size: 12px;
-      font-weight: 850;
-      margin-bottom: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
-    .section-title h2 {
-      color: var(--dark);
-      font-size: clamp(34px,5vw,53px);
-      line-height: 1.08;
+    .section-head h2 {
+      font-size: clamp(34px,5vw,52px);
+      line-height: 1.1;
       letter-spacing: -2px;
-      margin-bottom: 16px;
+      margin-bottom: 15px;
+      color: #0f172a;
     }
 
-    .section-title p {
-      color: var(--muted);
-      font-size: 16px;
+    .section-head p {
+      color: #667085;
     }
 
-    /* ================= PROBLEM ================= */
+    /* CARDS */
 
-    .cards-3 {
+    .cards {
       display: grid;
       grid-template-columns: repeat(3,1fr);
       gap: 20px;
     }
 
     .card {
+      padding: 28px;
       background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 30px;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
     }
 
-    .card-number {
-      width: 45px;
-      height: 45px;
-      border-radius: 12px;
-      background: #eef2ff;
-      color: var(--blue);
-      display: grid;
-      place-items: center;
-      font-weight: 850;
-      margin-bottom: 20px;
+    .number {
+      color: #2563eb;
+      font-weight: 800;
+      margin-bottom: 18px;
     }
 
     .card h3 {
-      margin-bottom: 9px;
-      font-size: 19px;
+      margin-bottom: 8px;
     }
 
     .card p {
-      color: var(--muted);
+      color: #667085;
       font-size: 14px;
     }
 
-    /* ================= AI EMPLOYEE ================= */
+    /* PRODUCT */
 
     .two-column {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 55px;
       align-items: center;
     }
 
-    .check-list {
+    .feature-list {
       display: grid;
-      gap: 13px;
+      gap: 12px;
     }
 
-    .check-item {
-      display: flex;
-      gap: 14px;
-      padding: 17px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
+    .feature-item {
+      padding: 16px;
+      border: 1px solid #e5e7eb;
+      border-radius: 13px;
     }
 
-    .check-icon {
-      width: 27px;
-      height: 27px;
-      border-radius: 50%;
-      background: #eef2ff;
-      color: var(--blue);
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      flex-shrink: 0;
+    .feature-item strong {
+      display: block;
+      margin-bottom: 4px;
     }
 
-    .check-item h4 {
-      font-size: 15px;
-      margin-bottom: 3px;
-    }
-
-    .check-item p {
-      color: var(--muted);
+    .feature-item p {
+      color: #667085;
       font-size: 13px;
     }
 
-    .ai-box {
-      background: var(--dark);
+    .ai-panel {
+      background: #0f172a;
       color: white;
-      border-radius: 25px;
-      padding: 30px;
-      box-shadow: var(--shadow);
+      border-radius: 22px;
+      padding: 28px;
     }
 
-    .ai-box-header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 25px;
+    .ai-panel h3 {
+      margin-bottom: 20px;
     }
 
-    .ai-box-title {
-      font-size: 19px;
-      font-weight: 850;
-    }
-
-    .ai-online {
-      color: #7df0a8;
-      font-size: 12px;
-    }
-
-    .chat-box {
-      background: #131c2e;
-      border-radius: 16px;
-      padding: 18px;
-    }
-
-    .chat-message {
-      padding: 12px;
-      border-radius: 11px;
-      margin-bottom: 11px;
+    .chat {
+      padding: 14px;
+      border-radius: 12px;
+      margin: 9px 0;
+      background: #1e293b;
       font-size: 13px;
     }
 
-    .chat-user {
-      background: #232e45;
+    .chat.ai-chat {
+      background: #2563eb;
+      margin-left: 25px;
     }
 
-    .chat-ai {
-      background: var(--blue);
-      margin-left: 20px;
-    }
-
-    /* ================= STEPS ================= */
+    /* STEPS */
 
     .steps {
       display: grid;
@@ -565,59 +433,56 @@
     }
 
     .step {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
       padding: 30px;
+      border: 1px solid #e5e7eb;
+      border-radius: 18px;
     }
 
-    .step-number {
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 850;
-      margin-bottom: 20px;
+    .step span {
+      color: #2563eb;
+      font-size: 12px;
+      font-weight: 800;
     }
 
     .step h3 {
-      font-size: 20px;
-      margin-bottom: 9px;
+      margin: 18px 0 8px;
     }
 
     .step p {
-      color: var(--muted);
+      color: #667085;
       font-size: 14px;
     }
 
-    /* ================= FEATURES ================= */
+    /* FEATURES */
 
-    .features-grid {
+    .feature-grid {
       display: grid;
       grid-template-columns: repeat(3,1fr);
       gap: 18px;
     }
 
-    .feature {
-      padding: 26px;
-      border: 1px solid var(--border);
-      border-radius: 17px;
-      transition: .2s ease;
+    .feature-box {
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 25px;
+      transition: .2s;
     }
 
-    .feature:hover {
+    .feature-box:hover {
       transform: translateY(-4px);
-      box-shadow: var(--shadow);
+      box-shadow: 0 15px 40px rgba(15,23,42,.08);
     }
 
-    .feature h3 {
-      font-size: 18px;
+    .feature-box h3 {
       margin-bottom: 7px;
     }
 
-    .feature p {
-      color: var(--muted);
+    .feature-box p {
+      color: #667085;
       font-size: 14px;
     }
 
-    /* ================= PRICING ================= */
+    /* PRICING */
 
     .pricing {
       display: grid;
@@ -626,32 +491,26 @@
     }
 
     .price-card {
-      border: 1px solid var(--border);
+      border: 1px solid #e5e7eb;
       border-radius: 20px;
-      padding: 32px;
+      padding: 30px;
       background: white;
     }
 
     .price-card.featured {
-      border: 2px solid var(--blue);
-      box-shadow: var(--shadow);
-    }
-
-    .price-card h3 {
-      font-size: 21px;
-    }
-
-    .price-card > p {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 5px;
+      border: 2px solid #2563eb;
+      box-shadow: 0 20px 50px rgba(37,99,235,.12);
     }
 
     .price {
-      margin: 22px 0;
-      font-size: 34px;
-      font-weight: 850;
-      color: var(--dark);
+      font-size: 32px;
+      font-weight: 800;
+      margin: 20px 0;
+    }
+
+    .price-card p {
+      color: #667085;
+      font-size: 14px;
     }
 
     .price-list {
@@ -660,152 +519,137 @@
     }
 
     .price-list li {
-      color: #586477;
+      padding: 6px 0;
+      color: #475569;
       font-size: 14px;
-      padding: 7px 0;
     }
 
-    /* ================= ABOUT ================= */
+    /* ABOUT */
 
-    .about-box {
-      max-width: 850px;
+    .about {
+      max-width: 800px;
       text-align: center;
       margin: auto;
     }
 
-    .about-box p {
-      color: var(--muted);
+    .about p {
+      color: #667085;
       font-size: 17px;
+      margin-top: 15px;
     }
 
-    /* ================= FOUNDER ================= */
-
-    .founder {
-      background: var(--light);
-    }
+    /* FOUNDER */
 
     .founder-box {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 35px;
-      align-items: center;
       max-width: 850px;
       margin: auto;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 25px;
       padding: 35px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 22px;
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 30px;
+      align-items: center;
     }
 
     .founder-avatar {
-      width: 160px;
-      height: 160px;
+      width: 145px;
+      height: 145px;
       border-radius: 50%;
-      background: linear-gradient(135deg,#0d1a2d,#3563ff);
-      color: white;
       display: grid;
       place-items: center;
-      font-size: 50px;
+      background: #111827;
+      color: white;
+      font-size: 42px;
       font-weight: 900;
     }
 
-    .founder-info h2 {
+    .founder-box h2 {
       font-size: 30px;
-      color: var(--dark);
     }
 
-    .founder-role {
-      color: var(--blue);
-      font-weight: 750;
-      margin: 4px 0 13px;
+    .role {
+      color: #2563eb;
+      font-weight: 700;
+      margin: 3px 0 12px;
     }
 
-    .founder-info p {
-      color: var(--muted);
+    .founder-box p {
+      color: #667085;
       font-size: 14px;
     }
 
-    .founder-links {
+    .socials {
       display: flex;
-      gap: 10px;
+      gap: 9px;
       flex-wrap: wrap;
-      margin-top: 20px;
+      margin-top: 18px;
     }
 
-    .founder-link {
-      padding: 9px 13px;
-      border: 1px solid var(--border);
-      border-radius: 9px;
+    .social {
+      border: 1px solid #dbe1e8;
+      border-radius: 8px;
+      padding: 8px 12px;
       font-size: 13px;
       font-weight: 700;
     }
 
-    .founder-link:hover {
-      border-color: var(--blue);
-      color: var(--blue);
+    .social:hover {
+      color: #2563eb;
+      border-color: #2563eb;
     }
 
-    /* ================= FAQ ================= */
+    /* FAQ */
 
     .faq {
-      max-width: 850px;
+      max-width: 800px;
       margin: auto;
     }
 
     details {
-      padding: 21px 0;
-      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      border-bottom: 1px solid #e5e7eb;
     }
 
     summary {
       cursor: pointer;
-      font-weight: 750;
-      color: var(--dark);
+      font-weight: 700;
     }
 
     details p {
-      margin-top: 11px;
-      color: var(--muted);
+      color: #667085;
+      margin-top: 10px;
       font-size: 14px;
     }
 
-    /* ================= CTA ================= */
-
-    .cta-section {
-      padding-top: 30px;
-      padding-bottom: 100px;
-    }
+    /* CTA */
 
     .cta {
-      background: var(--dark);
+      background: #0f172a;
       color: white;
+      border-radius: 25px;
       text-align: center;
-      padding: 75px 25px;
-      border-radius: 28px;
+      padding: 70px 25px;
     }
 
     .cta h2 {
-      max-width: 750px;
+      max-width: 700px;
       margin: auto;
-      font-size: clamp(35px,5vw,55px);
+      font-size: clamp(35px,5vw,54px);
       line-height: 1.05;
-      letter-spacing: -2px;
     }
 
     .cta p {
-      max-width: 620px;
-      margin: 18px auto 0;
-      color: #aeb8c9;
+      max-width: 600px;
+      margin: 18px auto;
+      color: #aab4c5;
     }
 
-    .cta .btn {
-      margin-top: 27px;
-    }
-
-    /* ================= FOOTER ================= */
+    /* FOOTER */
 
     footer {
-      background: #050a13;
+      background: #050b15;
       color: white;
       padding: 55px 0 25px;
     }
@@ -813,20 +657,20 @@
     .footer-grid {
       display: grid;
       grid-template-columns: 1.5fr repeat(3,1fr);
-      gap: 35px;
-      padding-bottom: 40px;
+      gap: 30px;
+      padding-bottom: 35px;
     }
 
     .footer-description {
-      max-width: 320px;
       color: #8792a5;
       font-size: 14px;
-      margin-top: 14px;
+      max-width: 300px;
+      margin-top: 12px;
     }
 
     .footer-title {
       font-weight: 800;
-      margin-bottom: 13px;
+      margin-bottom: 12px;
     }
 
     .footer-links {
@@ -846,46 +690,62 @@
       color: white;
     }
 
-    .footer-bottom {
-      border-top: 1px solid #1b2434;
+    .copyright {
+      border-top: 1px solid #1e293b;
       padding-top: 20px;
-      color: #687489;
+      color: #64748b;
       font-size: 12px;
       display: flex;
       justify-content: space-between;
-      gap: 15px;
       flex-wrap: wrap;
+      gap: 10px;
     }
 
-    /* ================= MOBILE ================= */
+    /* MOBILE */
 
-    @media (max-width: 900px) {
+    @media (max-width: 850px) {
 
-      .nav,
-      .nav-buttons {
+      nav {
         display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        border-bottom: 1px solid #e5e7eb;
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .menu-button {
+      nav.open {
+        display: flex;
+      }
+
+      .menu {
         display: block;
       }
 
-      .dashboard {
+      .cards,
+      .steps,
+      .feature-grid,
+      .pricing {
         grid-template-columns: 1fr;
-      }
-
-      .sidebar {
-        display: none;
       }
 
       .two-column {
         grid-template-columns: 1fr;
       }
 
-      .cards-3,
-      .steps,
-      .features-grid,
-      .pricing {
+      .dashboard {
+        grid-template-columns: 1fr;
+      }
+
+      .side {
+        display: none;
+      }
+
+      .dash-grid {
         grid-template-columns: 1fr;
       }
 
@@ -902,15 +762,15 @@
         margin: auto;
       }
 
-      .founder-links {
+      .socials {
         justify-content: center;
       }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 550px) {
 
       .hero {
-        padding: 75px 0 60px;
+        padding: 70px 0 55px;
       }
 
       .hero h1 {
@@ -922,27 +782,19 @@
       }
 
       section {
-        padding: 70px 0;
-      }
-
-      .dashboard-main {
-        padding: 18px;
-      }
-
-      .dashboard-grid {
-        grid-template-columns: 1fr;
+        padding: 65px 0;
       }
 
       .footer-grid {
         grid-template-columns: 1fr;
       }
 
-      .cta {
-        padding: 55px 20px;
+      .product-preview {
+        margin-top: 40px;
       }
 
-      .founder-box {
-        padding: 25px;
+      .dash-main {
+        padding: 15px;
       }
     }
   </style>
@@ -955,33 +807,29 @@
   <header>
     <div class="container navbar">
 
-      <a href="#home" class="brand">
-        <span class="brand-icon">A</span>
+      <a href="#home" class="logo">
+        <span class="logo-icon">A</span>
         <span>AutoBiz Lab</span>
       </a>
 
-      <ul class="nav" id="desktopNav">
-        <li><a href="#product">Product</a></li>
-        <li><a href="#how">How It Works</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#founder">Founder</a></li>
-      </ul>
+      <nav id="nav">
+        <a href="#product">Product</a>
+        <a href="#how">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#founder">Founder</a>
+      </nav>
 
-      <div class="nav-buttons">
-        <a href="https://autobiz-saas-platfor-a94v.bolt.host" class="btn btn-outline">
-          Login
-        </a>
-
-        <a href="https://autobiz-saas-platfor-a94v.bolt.host" class="btn btn-primary">
+      <div>
+        <a
+          href="https://autobiz-saas-platfor-a94v.bolt.host"
+          class="btn btn-primary">
           Start Free
         </a>
-      </div>
 
-      <button class="menu-button" onclick="toggleMenu()" aria-label="Open navigation">
-        ☰
-      </button>
+        <button class="menu" onclick="toggleMenu()">☰</button>
+      </div>
 
     </div>
   </header>
@@ -996,25 +844,25 @@
       <div class="container">
 
         <div class="badge">
-          <span class="badge-dot"></span>
-          Building the future of AI-powered business
+          ● Building the future of AI-powered business
         </div>
 
         <h1>
           AI Employees
-          <span class="gradient">for Your Business</span>
+          <span class="blue">for Your Business</span>
         </h1>
 
         <p>
           AutoBiz Lab builds AI employees that help businesses
           manage customers, conversations, follow-ups and everyday
-          business tasks.
+          business work.
         </p>
 
-        <div class="hero-actions">
+        <div class="hero-buttons">
 
-          <a href="https://autobiz-saas-platfor-a94v.bolt.host"
-             class="btn btn-primary">
+          <a
+            href="https://autobiz-saas-platfor-a94v.bolt.host"
+            class="btn btn-primary">
             Start Free →
           </a>
 
@@ -1024,27 +872,257 @@
 
         </div>
 
-        <p class="hero-small">
-          Start with an AI Customer Manager built for your business.
-        </p>
-
 
         <!-- PRODUCT PREVIEW -->
 
-        <div class="preview">
+        <div class="product-preview">
 
-          <div class="preview-window">
+          <div class="preview">
 
-            <div class="window-bar">
-              <span class="window-dot"></span>
-              <span class="window-dot"></span>
-              <span class="window-dot"></span>
+            <div class="browser">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
             </div>
 
             <div class="dashboard">
 
-              <aside class="sidebar">
+              <div class="side">
 
-                <div class="sidebar-title">
-                  AutoBiz
-    
+                <strong>AutoBiz</strong>
+
+                <div class="side-item active">
+                  Overview
+                </div>
+
+                <div class="side-item">
+                  Customers
+                </div>
+
+                <div class="side-item">
+                  Conversations
+                </div>
+
+                <div class="side-item">
+                  Follow-ups
+                </div>
+
+                <div class="side-item">
+                  AI Employee
+                </div>
+
+              </div>
+
+
+              <div class="dash-main">
+
+                <div class="dash-header">
+
+                  <strong>
+                    AI Customer Manager
+                  </strong>
+
+                  <span class="status">
+                    ● Active
+                  </span>
+
+                </div>
+
+
+                <div class="dash-grid">
+
+                  <div class="dash-card">
+
+                    <h4>
+                      Customer Conversation
+                    </h4>
+
+                    <div class="message customer">
+                      Hi, I want to know more about your service.
+                    </div>
+
+                    <div class="message ai">
+                      Hi! I'd be happy to help. What would you like to know?
+                    </div>
+
+                    <div class="message customer">
+                      What plans do you offer?
+                    </div>
+
+                    <div class="message ai">
+                      I can help you find the right plan for your business.
+                    </div>
+
+                  </div>
+
+
+                  <div class="dash-card">
+
+                    <h4>
+                      AI Employee
+                    </h4>
+
+                    <h2>
+                      Active
+                    </h2>
+
+                    <p>
+                      Ready to assist customers
+                    </p>
+
+                    <br>
+
+                    <h2>
+                      24/7
+                    </h2>
+
+                    <p>
+                      Automated assistance
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROBLEM -->
+
+    <section class="gray">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div class="eyebrow">
+            The Problem
+          </div>
+
+          <h2>
+            Businesses spend too much time on repetitive customer work.
+          </h2>
+
+          <p>
+            AutoBiz Lab is designed to help businesses reduce routine
+            work and focus more on growth.
+          </p>
+
+        </div>
+
+
+        <div class="cards">
+
+          <div class="card">
+
+            <div class="number">01</div>
+
+            <h3>
+              Repetitive Questions
+            </h3>
+
+            <p>
+              Businesses repeatedly answer the same customer questions.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="number">02</div>
+
+            <h3>
+              Missed Follow-ups
+            </h3>
+
+            <p>
+              Manual follow-ups can cause businesses to lose opportunities.
+            </p>
+
+          </div>
+
+
+          <div class="card">
+
+            <div class="number">03</div>
+
+            <h3>
+              Manual Work
+            </h3>
+
+            <p>
+              Teams spend valuable time managing routine customer interactions.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PRODUCT -->
+
+    <section id="product">
+
+      <div class="container">
+
+        <div class="two-column">
+
+          <div>
+
+            <div class="section-head" style="text-align:left;margin-left:0;">
+
+              <div class="eyebrow">
+                Product
+              </div>
+
+              <h2>
+                Meet the AI Customer Manager.
+              </h2>
+
+              <p>
+                Your AI employee helps manage customer conversations
+                and routine customer work.
+              </p>
+
+            </div>
+
+
+            <div class="feature-list">
+
+              <div class="feature-item">
+
+                <strong>
+                  ✓ Customer Questions
+                </strong>
+
+                <p>
+                  Help customers get answers quickly.
+                </p>
+
+              </div>
+
+
+              <div class="feature-item">
+
+                <strong>
+                  ✓ Customer Information
+                </strong>
+
+                <p>
+                  Keep important customer information organized.
+               
